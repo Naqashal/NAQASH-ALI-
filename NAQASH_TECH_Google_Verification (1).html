@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta name="google-site-verification" content="wnxbmPuiWi72qo025_IJGO7yGQzj6DmBvKZkSK7pf7Y" /><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#080817" name="theme-color"/><meta content="NAQASH ALI — personal portfolio" name="description"/><title>NAQASH TECH | NAQASH TECH</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap');
+:root{--bg:#090507;--panel:#1a0b10;--panel2:#241016;--line:#4b2830;--a:#ff2947;--b:#ff8290;--txt:#fff7f8;--muted:#c7aeb3;--pink:#ff1744}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(ellipse at 50% 20%,#3a0b16 0,transparent 42%),radial-gradient(ellipse at 90% 80%,#310812 0,transparent 34%),var(--bg);color:var(--txt);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.15;background-image:linear-gradient(#ff52601a 1px,transparent 1px),linear-gradient(90deg,#ff52601a 1px,transparent 1px);background-size:42px 42px;z-index:-1}
+.wrap{width:min(1120px,92%);margin:auto}.top{position:sticky;top:0;z-index:20;padding:12px 0;background:#090817d9;backdrop-filter:blur(18px);border-bottom:1px solid #55232d}nav{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font:700 .9rem Outfit, sans-serif;letter-spacing:1px}.brand b{color:var(--a)}.pill{border:1px solid #8c5bba;background:#1b1128;padding:7px 13px;border-radius:30px;color:#e5b7ff;font-size:.75rem;font-weight:800}.dots{border:1px solid var(--a);border-radius:50%;width:42px;height:42px;color:var(--a);background:#171126;font-size:1.3rem}
+.hero{text-align:center;padding:42px 0 35px}.available{display:inline-block;padding:12px 23px;border:1px solid #63313a;border-radius:40px;background:#211014;color:#ff8792;font-weight:800;letter-spacing:2px;font-size:.78rem;box-shadow:0 0 25px #ff294722}
+.avatar-wrap{width:230px;height:230px;margin:32px auto 24px;position:relative;display:grid;place-items:center;cursor:pointer;isolation:isolate}
+.avatar-wrap:before,.avatar-wrap:after{content:"";position:absolute;inset:0;border-radius:50%;border:2px dashed #ff647588;animation:spin 13s linear infinite;z-index:-1}.avatar-wrap:after{inset:10px;border:3px solid transparent;border-top-color:var(--a);border-right-color:var(--a);animation:spin 5s linear infinite reverse;filter:drop-shadow(0 0 8px var(--b))}
+.avatar-wrap img{width:184px;height:184px;object-fit:cover;border-radius:50%;border:5px solid var(--a);outline:3px solid var(--b);box-shadow:0 0 28px #ff294799,0 0 55px #ff536644;transition:filter .5s,transform .5s}
+.avatar-wrap:active img{transform:scale(.96)}.orbit{position:absolute;width:100%;height:100%;border-radius:50%;border:1px solid transparent;border-left-color:var(--pink);border-bottom-color:var(--a);animation:spin 8s linear infinite}
+.orbit i{position:absolute;top:12px;right:27px;width:13px;height:13px;border-radius:50%;background:var(--b);box-shadow:0 0 18px var(--b)}
+.corner{position:absolute;width:27px;height:27px;border-color:var(--a);border-style:solid;filter:drop-shadow(0 0 8px var(--b))}.c1{top:0;left:0;border-width:3px 0 0 3px}.c2{top:0;right:0;border-width:3px 3px 0 0}.c3{bottom:0;left:0;border-width:0 0 3px 3px}.c4{bottom:0;right:0;border-width:0 3px 3px 0}
+h1{font:800 clamp(2rem,7vw,4rem) Orbitron;margin:15px 0;background:linear-gradient(90deg,#fff,var(--b),var(--a),#fff);background-size:220%;background-clip:text;color:transparent;animation:shine 5s linear infinite}.role{font:600 1.15rem Orbitron;color:#d8c8ee}.actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap;margin-top:27px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 23px;border-radius:40px;background:linear-gradient(110deg,#ff435b,#d20d32);color:white;font-weight:800;border:1px solid #ff6478;box-shadow:0 8px 25px #ff294744;cursor:pointer;transition:transform 0.15s ease-out, box-shadow 0.25s, filter 0.25s !important;}.btn.ghost{background:#181427;border-color:#514268;box-shadow:none}
+.section{padding:38px 0}.panel{position:relative;overflow:hidden;padding:21px;border-radius:34px;background:linear-gradient(145deg,#1b0d11ed,#170b10ed);border:1px solid #553038;box-shadow:0 18px 50px #0005,inset 0 1px #ffffff12;transition:transform 0.1s ease-out,border-color 0.35s,box-shadow 0.35s !important;}.panel:before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(130deg,var(--a),transparent 35%,var(--b),transparent 75%,var(--pink));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.7}.panel:hover{transform:translateY(-5px);border-color:var(--a)}.heading{text-align:center;font-size:1.28rem;font-weight:800;margin:0 0 25px}.heading span{color:var(--a)}.aboutgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:center}.aboutpic{width:100%;max-width:235px;aspect-ratio:3/4;object-fit:cover;border-radius:22px;border:2px solid var(--a);box-shadow:0 0 28px #ff244955;position:relative;z-index:2}.about-photo-wrap{position:relative;width:min(100%,250px);margin:auto;padding:9px}.about-photo-wrap:before,.about-photo-wrap:after{content:'';position:absolute;inset:0;border:1px solid var(--a);border-radius:27px;transform:rotate(5deg);animation:frameOrbit 6s linear infinite;box-shadow:0 0 15px #ff294744}.about-photo-wrap:after{inset:5px;border-color:var(--b);transform:rotate(-5deg);animation-direction:reverse;animation-duration:8s;opacity:.8}@keyframes frameOrbit{50%{transform:rotate(0deg) scale(1.035)}}.info{display:grid;gap:0}.info div{padding:11px 0;border-bottom:1px dashed #684b7b}.info small{display:block;color:var(--a);font-weight:800;letter-spacing:2px}.info strong{font-size:.88rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:24px}.stat{text-align:center;padding:20px 8px;border:1px solid #423552;border-radius:22px;background:#ffffff08;animation:float 5s ease-in-out infinite}.stat:nth-child(2){animation-delay:.5s}.stat:nth-child(3){animation-delay:1s}.stat b{font:700 1.35rem Outfit, sans-serif;color:var(--a);display:block}.stat span{color:var(--muted);font-weight:700;font-size:.68rem}
+.chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:22px}.chip{padding:8px 13px;font-size:.76rem;border-radius:30px;background:#291319;border:1px solid #63343c;color:#ffe4e7;font-weight:700}
+.skills{display:grid;gap:15px}.skill{background:#0c0b18;border:1px solid #332744;padding:13px;border-radius:18px}.skilltop{display:flex;justify-content:space-between;gap:10px;font-weight:700;font-size:.86rem}.skilltop b{color:var(--a)}.bar{height:8px;border-radius:20px;background:#05050b;border:1px solid #44334f;margin-top:12px;overflow:hidden}.bar i{display:block;height:100%;width:0;border-radius:20px;background:linear-gradient(90deg,var(--a),var(--b),#fff);box-shadow:0 0 15px var(--a);animation:none}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.tile{padding:16px 12px;text-align:center;border-radius:25px;background:linear-gradient(145deg,#251116,#170b10);border:1px solid #573039;box-shadow:0 10px 25px #0005;transition:transform 0.1s ease-out,border-color 0.35s,box-shadow 0.35s !important;position:relative;overflow:hidden}.tile:after{content:"";position:absolute;inset:-70% -30%;background:linear-gradient(110deg,transparent 40%,#ffffff12 50%,transparent 60%);transform:translateX(-70%) rotate(15deg);transition:.7s}.tile:hover:after{transform:translateX(70%) rotate(15deg)}.tile:hover{transform:translateY(-7px) scale(1.015);border-color:var(--a);box-shadow:0 12px 32px #ff294720}.ico{width:60px;height:60px;margin:0 auto 13px;border:1px dashed var(--a);border-radius:20px;display:grid;place-items:center;font-size:1.7rem;color:var(--a);box-shadow:inset 0 0 20px #ff294722}.tile h3{font:600 1rem Orbitron;margin:9px 0}.tile p{color:var(--muted);font-size:.85rem;line-height:1.6;margin:0}
+.timeline{display:grid;gap:14px}.timecard{padding:20px;border-left:3px solid var(--a);background:#ffffff08;border-radius:0 18px 18px 0}.timecard small{color:var(--a);font-weight:800;letter-spacing:3px}.timecard h3{font:600 .9rem Outfit, sans-serif}.timecard p{color:var(--muted);line-height:1.6}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;border:1px solid #713440;transition:.35s;cursor:pointer}.gallery img:hover{transform:scale(1.04);box-shadow:0 0 20px #ff294777}
+.service-section{padding:50px 0 110px}.service-card{cursor:pointer;min-height:138px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;isolation:isolate;transition:transform 0.1s ease-out,border-color 0.35s,box-shadow 0.35s !important;}.service-card.active{background:radial-gradient(circle at var(--x,50%) var(--y,50%),#ff294766,transparent 55%),linear-gradient(145deg,#25133a,#170b10);border-color:var(--a);box-shadow:0 0 35px #ff294733}.torch{position:absolute;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,#ffb0b844 0, #ff294722 35%,transparent 70%);opacity:0;pointer-events:none;transition:opacity .3s;z-index:-1}.service-card.active .torch{opacity:1}.service-card .ico{font-size:1.45rem;width:54px;height:54px}
+.bottomnav{position:fixed;bottom:0;left:0;right:0;z-index:19;background:#0b0918eF;backdrop-filter:blur(16px);border:1px solid #4a3b5e;border-bottom:0;border-radius:28px 28px 0 0;padding:10px 5px calc(10px + env(safe-area-inset-bottom));display:flex;justify-content:space-around}.bottomnav a{color:#9a91b2;text-align:center;font-size:1.25rem;min-width:42px}.bottomnav a span{display:block;font-size:.58rem}.bottomnav a.active{color:var(--a);filter:drop-shadow(0 0 8px var(--b))}
+footer{text-align:center;padding:25px;color:#9d94ad;border-top:1px solid #332744}.lightflash{position:fixed;inset:0;pointer-events:none;z-index:50;background:radial-gradient(circle at var(--lx,50%) var(--ly,50%),#ff9aa544,transparent 30%);opacity:0;transition:opacity .5s}.lightflash.on{opacity:1}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes shine{to{background-position:220% center}}@keyframes float{50%{transform:translateY(-6px)}}@keyframes grow{from{width:0}}
+@media(max-width:650px){.hero{padding-top:35px}.avatar-wrap{width:210px;height:210px}.avatar-wrap img{width:166px;height:166px}.panel{padding:22px 17px;border-radius:28px}.aboutgrid{grid-template-columns:1fr;text-align:center}.aboutpic{max-width:210px;margin:auto}.grid{gap:11px}.tile{padding:19px 10px}.gallery{grid-template-columns:repeat(2,1fr)}.heading{font-size:1.45rem}.info{text-align:left}.section{padding:28px 0}}
+
+.panel,.tile,.skill,.stat,.chip,.timecard,.gallery img{position:relative}
+.panel:after,.tile:before,.skill:before,.stat:before,.chip:before,.timecard:after{
+ content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;
+ background:conic-gradient(from var(--turn,0deg),transparent 0 65%,#ff2947 75%,#ff9aa5 82%,transparent 91% 100%);
+ -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+ -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;
+ animation:borderOrbit 4s linear infinite;
+}
+.tile:before{animation-duration:3.2s}
+.skill:before{animation-duration:4.5s}
+.chip{overflow:hidden;background:linear-gradient(135deg,#291218,#170b10);border:1px solid #69313b;padding:11px 17px;box-shadow:0 5px 18px #ff29471c;transition:transform .3s,box-shadow .3s}
+.chip:hover{transform:translateY(-5px);box-shadow:0 0 22px #ff294755}
+.bar i{position:relative;background:linear-gradient(90deg,#b90e2b,#ff2947,#ff9aa5,#ff2947);background-size:220% 100%;animation:none,barShine 2.7s linear infinite}
+.bar i:after{content:"";position:absolute;top:-4px;right:-2px;width:12px;height:18px;border-radius:50%;background:#fff;box-shadow:0 0 12px #fff,0 0 20px #ff2947}
+.gallery img{padding:2px;background:linear-gradient(135deg,#ff2947,#47151e,#ff8c9a);border-radius:18px;animation:galleryPulse 4s ease-in-out infinite}
+.gallery img:nth-child(2n){animation-delay:1s}
+.skill{overflow:hidden}
+.skilltop b{color:#ff5268;text-shadow:0 0 12px #ff294766}
+@keyframes borderOrbit{to{--turn:360deg}}
+@property --turn{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes barShine{to{background-position:220% 0}}
+@keyframes galleryPulse{50%{box-shadow:0 0 22px #ff294744;transform:translateY(-3px)}}
+
+.tile h3{font:650 .88rem Outfit,sans-serif;letter-spacing:.15px}.tile p{font-size:.74rem;line-height:1.5}
+.tile .ico{width:50px;height:50px;display:grid;place-items:center;border-radius:15px;background:radial-gradient(circle at 30% 25%,#ff9ca8,#ff2947 30%,#4a0d1b 75%);border:1px solid #ff8998;color:#fff;box-shadow:0 0 0 4px #ff29471c,0 0 18px #ff294755;font-size:1.35rem}
+.panel .heading{font-family:Outfit,sans-serif;font-weight:700;letter-spacing:.1px}
+.insta-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.post-card{min-width:0;border:1px solid #63313b;border-radius:17px;padding:7px;background:linear-gradient(145deg,#251116,#10090c);position:relative;overflow:hidden;box-shadow:0 8px 20px #0006}
+.post-card:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:conic-gradient(from 0deg,transparent 0 68%,#ff2947 78%,#ff9aa5 84%,transparent 94%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;animation:postBorder 4.5s linear infinite}
+@keyframes postBorder{to{transform:rotate(360deg)}}
+.post-card img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;cursor:zoom-in;display:block}
+.post-actions{display:flex;align-items:center;gap:8px;padding:7px 2px 2px;font-size:.72rem;color:#f8dce0}
+.post-actions button{border:0;background:transparent;color:#ff8b9a;font-size:1.2rem;padding:0 3px;cursor:pointer}
+.post-actions button.liked{color:#ff2447;text-shadow:0 0 10px #ff2447}
+.post-card p{font-size:.68rem;color:var(--muted);margin:3px 2px 5px}
+.photo-modal{position:fixed;inset:0;z-index:70;background:#050308f2;display:none;align-items:center;justify-content:center;padding:18px}
+.photo-modal.open{display:flex}.photo-modal-inner{width:min(470px,94vw);background:#170b10;border:1px solid #ff5268;border-radius:18px;padding:10px;box-shadow:0 0 40px #ff294744}
+.photo-modal img{width:100%;max-height:76vh;object-fit:contain;border-radius:12px}.photo-close{float:right;border:1px solid #713440;background:#261016;color:#fff;border-radius:20px;padding:6px 11px;margin-bottom:8px}
+.live-pill{display:inline-flex;align-items:center;gap:7px;border:1px solid #713440;background:#1c0b11;border-radius:25px;padding:6px 10px;font-size:.68rem;color:#ffdce0}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--a);box-shadow:0 0 10px var(--a);animation:livePulse 1.2s infinite}
+@keyframes livePulse{50%{opacity:.35;transform:scale(.75)}}
+
+@media(max-width:520px){.panel{padding:16px 13px}.heading{font-size:1.16rem}.tile{padding:13px 9px}.service-card{min-height:126px}.aboutpic{max-width:205px}.stats{gap:8px}.stat{padding:14px 5px}.insta-grid{gap:9px}}
+.brand-lockup{display:flex;align-items:center;gap:9px;font:800 .9rem Outfit,sans-serif;letter-spacing:1.4px}
+.brand-lockup img{width:35px;height:35px;border-radius:50%;object-fit:cover;border:2px solid var(--a);box-shadow:0 0 13px var(--a)}
+.hero h1{font:800 clamp(1.6rem,5vw,2.7rem) Outfit,sans-serif;letter-spacing:1px}
+.section-note{color:var(--muted);font-size:.78rem;text-align:center;margin:-7px auto 20px;max-width:650px}
+.service-group{margin:24px 0}.service-group>h3{font:700 1rem Outfit,sans-serif;color:var(--b);margin:0 0 12px;padding-left:10px;border-left:3px solid var(--a)}
+.price-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.price-card .price{display:block;font:800 1.45rem Outfit,sans-serif;color:var(--a);margin:7px 0}
+.contact-form{max-width:680px;margin:18px auto 0;display:grid;gap:11px}
+.contact-form input,.contact-form textarea{width:100%;padding:13px 15px;border:1px solid #63313b;border-radius:13px;background:#10090c;color:#fff;font:500 .84rem Manrope;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{outline:1px solid var(--a);box-shadow:0 0 14px var(--a)}
+.form-note{text-align:center;color:var(--muted);font-size:.72rem}.review-panel{margin-top:22px}
+.review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.review-card{padding:14px!important;min-height:130px}
+.review-card h3{font-size:.8rem}.review-card p{font-size:.73rem}.review-card small{font-size:.62rem;color:var(--muted)}
+.stars{color:#ffc65c;letter-spacing:2px;font-size:.85rem}
+@media(max-width:650px){.price-grid{grid-template-columns:1fr 1fr}.review-grid{grid-template-columns:1fr 1fr}.brand-lockup img{width:31px;height:31px}}
+@media(max-width:390px){.price-grid,.review-grid{grid-template-columns:1fr}}
+
+:root{
+  --bg:#070509;--panel:#160b10;--panel2:#211018;--line:#6a2636;
+  --a:#ff234f;--b:#ff9aaa;--txt:#fff8fa;--muted:#d0b5bd;
+  --pink:#ff1744;--glow:rgba(255,35,79,.28);
+}
+html{scroll-padding-top:100px}
+body{
+  background:
+    radial-gradient(ellipse at 12% 8%,rgba(255,35,79,.18),transparent 32%),
+    radial-gradient(ellipse at 88% 35%,rgba(150,20,65,.17),transparent 34%),
+    radial-gradient(ellipse at 50% 100%,rgba(255,100,130,.10),transparent 38%),
+    var(--bg);
+}
+body:after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.22;
+  background-image:radial-gradient(var(--b) 1px,transparent 1px);
+  background-size:34px 34px;mask-image:linear-gradient(to bottom,black,transparent 88%);
+}
+::selection{background:var(--a);color:white}
+.top{background:rgba(8,5,10,.82);border-bottom:1px solid rgba(255,80,115,.3);box-shadow:0 8px 30px #0005}
+.brand-lockup{letter-spacing:1.7px}
+.live-pill{box-shadow:inset 0 0 14px rgba(255,35,79,.1),0 0 18px rgba(255,35,79,.1)}
+.hero{padding-top:58px;padding-bottom:48px;position:relative}
+.available{box-shadow:0 0 0 5px rgba(255,35,79,.1),0 0 32px rgba(255,35,79,.3);animation:vipPulse 2.8s ease-in-out infinite}
+.avatar-wrap{filter:drop-shadow(0 15px 35px rgba(255,35,79,.3))}
+.avatar-wrap:before{border-style:dashed;filter:drop-shadow(0 0 10px rgba(255,35,79,.5))}
+.avatar-wrap:after{border-width:4px}
+.avatar-wrap img{box-shadow:0 0 25px rgba(255,35,79,.9),0 0 70px rgba(255,35,79,.3);transition:transform .55s cubic-bezier(.2,.8,.2,1),filter .5s}
+.avatar-wrap:hover img{transform:scale(1.055) rotate(2deg)}
+.hero h1{text-shadow:0 0 34px rgba(255,35,79,.3)}
+.role{color:#ffdce4;text-shadow:0 0 18px rgba(255,130,154,.3)}
+.btn{position:relative;overflow:hidden;isolation:isolate;transition:transform .25s,box-shadow .25s,filter .25s}
+.btn:before{content:"";position:absolute;inset:-80% -30%;z-index:-1;background:linear-gradient(110deg,transparent 40%,#ffffff55 50%,transparent 60%);transform:translateX(-100%) rotate(15deg);transition:transform .7s}
+.btn:hover{transform:translateY(-4px);box-shadow:0 12px 34px rgba(255,35,79,.6);filter:saturate(1.15)}
+.btn:hover:before{transform:translateX(100%) rotate(15deg)}
+.panel{background:linear-gradient(145deg,rgba(31,12,20,.91),rgba(12,7,12,.94));backdrop-filter:blur(14px);border-color:#713143;box-shadow:0 22px 65px #0008,inset 0 1px #ffffff12}
+.panel:hover{box-shadow:0 26px 70px #0009,0 0 28px rgba(255,35,79,.1)}
+.heading{letter-spacing:.3px;text-shadow:0 0 20px rgba(255,35,79,.2)}
+.stat{background:linear-gradient(145deg,#ffffff0c,rgba(255,35,79,.1));border-color:#713143;box-shadow:inset 0 1px #ffffff10,0 10px 28px #0004}
+.stat b{font-size:1.55rem;text-shadow:0 0 18px rgba(255,35,79,.5)}
+.chip{box-shadow:0 5px 18px rgba(255,41,71,.2),inset 0 1px #ffffff12}
+.skill{background:linear-gradient(145deg,#140b12,#09070b);border-color:#573044}
+.bar{height:10px}
+.tile{background:linear-gradient(145deg,rgba(45,16,27,.94),rgba(15,8,13,.98));border-color:#713143}
+.tile:hover{box-shadow:0 18px 38px rgba(255,41,71,.3)}
+.tile h3{letter-spacing:.25px}
+.timecard{background:linear-gradient(90deg,rgba(255,35,79,.1),#ffffff05);border:1px solid #5b2938;border-left:3px solid var(--a)}
+.gallery img,.post-card{box-shadow:0 10px 26px #0007}
+.post-card{background:linear-gradient(145deg,#29121b,#0d080c)}
+.post-card img{transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .35s}
+.post-card:hover img{transform:scale(1.035);filter:saturate(1.12)}
+.service-card.active{box-shadow:0 0 0 1px var(--b),0 0 35px rgba(255,35,79,.4)}
+.contact-form input,.contact-form textarea{transition:border-color .25s,box-shadow .25s,transform .25s}
+.contact-form input:focus,.contact-form textarea:focus{transform:translateY(-1px);border-color:var(--b)}
+.review-card{background:linear-gradient(145deg,#25111a,#10090e)}
+.bottomnav{background:rgba(9,6,12,.88);border-color:#693044;box-shadow:0 -10px 35px #0006}
+.bottomnav a{transition:color .2s,transform .2s}
+.bottomnav a:hover{transform:translateY(-3px);color:var(--b)}
+footer{border-color:#542536}
+.scroll-progress{position:fixed;top:0;left:0;width:0;height:3px;z-index:100;background:linear-gradient(90deg,var(--pink),var(--b),#fff);box-shadow:0 0 14px var(--a);pointer-events:none}
+.back-top{position:fixed;right:16px;bottom:88px;z-index:18;width:42px;height:42px;border-radius:50%;border:1px solid var(--b);background:#1b0b12;color:white;font-size:1.15rem;box-shadow:0 0 22px rgba(255,35,79,.5);opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;cursor:pointer}
+.back-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes vipPulse{50%{box-shadow:0 0 0 8px rgba(255,35,79,.1),0 0 38px rgba(255,35,79,.5)}}
+@media(max-width:650px){
+ .hero{padding-top:43px}.panel{backdrop-filter:blur(10px)}
+ .bottomnav{overflow-x:auto;justify-content:flex-start;gap:7px}
+ .bottomnav a{flex:1;min-width:43px}
+ .back-top{bottom:92px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+ .reveal{opacity:1;transform:none}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap');
+header.top { background:rgba(8,5,9,.90); border-bottom:1px solid rgba(255,42,75,.38); box-shadow:0 8px 30px rgba(0,0,0,.28); }
+header .brand-premium { display:flex; align-items:center; gap:11px; min-width:0; }
+header .brand .brand-dp {
+  width:43px; height:43px; flex:0 0 43px; object-fit:cover; display:block;
+  border-radius:50%; padding:2px; border:1px solid var(--b);
+  background:linear-gradient(135deg,var(--a),var(--b),#7b071c);
+  box-shadow:0 0 0 3px rgba(255,41,71,.12),0 0 22px rgba(255,41,71,.45);
+}
+header .brand b, header .premium-brand-text {
+  font-family:'Sora','Space Grotesk',sans-serif !important;
+  font-weight:800 !important; letter-spacing:.075em !important;
+  color:#fff !important; text-transform:uppercase;
+  text-shadow:0 0 10px rgba(255,41,71,.48),0 0 24px rgba(255,41,71,.22);
+}
+header .brand b {
+  position:relative; display:inline-block; font-size:clamp(.88rem,2.2vw,1.08rem);
+  background:linear-gradient(100deg,#fff 0%,var(--b) 28%,#fff 48%,var(--a) 72%,#fff 100%);
+  background-size:220% auto; -webkit-background-clip:text; background-clip:text;
+  -webkit-text-fill-color:transparent; animation:naqashShimmer 5s linear infinite;
+}
+header .brand b:after {
+  content:""; position:absolute; left:0; right:0; bottom:-5px; height:1px;
+  background:linear-gradient(90deg,transparent,var(--a),var(--b),transparent);
+  transform-origin:left; animation:naqashLine 3.2s ease-in-out infinite;
+}
+header .pill {
+  font-family:'Space Grotesk',sans-serif; letter-spacing:.09em;
+  border-color:rgba(255,95,120,.55); color:#ffdce1;
+  background:linear-gradient(120deg,rgba(255,41,71,.18),rgba(35,10,17,.88));
+  box-shadow:inset 0 0 14px rgba(255,41,71,.08),0 0 16px rgba(255,41,71,.10);
+}
+@keyframes naqashShimmer { to { background-position:220% center; } }
+@keyframes naqashLine { 0%,100% { transform:scaleX(.35); opacity:.45; } 50% { transform:scaleX(1); opacity:1; } }
+
+#about .info { gap:12px; }
+#about .info > div {
+  position:relative; overflow:hidden; padding:14px 16px; min-height:72px;
+  border:1px solid rgba(255,65,91,.32); border-radius:15px;
+  background:linear-gradient(115deg,rgba(255,41,71,.13),rgba(22,8,13,.88) 58%,rgba(255,41,71,.06));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 8px 22px rgba(0,0,0,.20);
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+#about .info > div:before {
+  content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
+  background:linear-gradient(180deg,var(--b),var(--a),#8b001d);
+  box-shadow:0 0 12px rgba(255,41,71,.6);
+}
+#about .info > div:after {
+  content:""; position:absolute; top:0; left:-80%; width:55%; height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.07),transparent);
+  transform:skewX(-18deg); animation:infoSweep 6s ease-in-out infinite;
+}
+#about .info > div:hover {
+  transform:translateY(-3px); border-color:var(--b);
+  box-shadow:0 12px 28px rgba(0,0,0,.28),0 0 20px rgba(255,41,71,.13);
+}
+#about .info small {
+  display:block; margin-bottom:7px; color:var(--b);
+  font-family:'Space Grotesk',sans-serif; font-size:.68rem;
+  font-weight:800; letter-spacing:.17em;
+}
+#about .info strong {
+  display:block; color:#fff5f6; font-family:'Sora','Space Grotesk',sans-serif;
+  font-size:.91rem; font-weight:700; letter-spacing:.015em;
+  overflow-wrap:anywhere; text-shadow:0 0 12px rgba(255,41,71,.12);
+}
+@keyframes infoSweep { 0%,68%,100% { left:-80%; } 34% { left:140%; } }
+
+#contact .actions .btn {
+  border:1px solid rgba(255,90,115,.58);
+  background:linear-gradient(125deg,rgba(255,41,71,.23),rgba(28,8,14,.96));
+  box-shadow:0 8px 22px rgba(0,0,0,.24),inset 0 0 15px rgba(255,41,71,.08);
+  font-family:'Sora','Space Grotesk',sans-serif; letter-spacing:.035em;
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+#contact .actions .btn:hover { transform:translateY(-4px); box-shadow:0 12px 28px rgba(255,41,71,.18); }
+#contact .contact-form {
+  padding:clamp(16px,3vw,24px); border:1px solid rgba(255,65,91,.35);
+  border-radius:20px; background:linear-gradient(145deg,rgba(255,41,71,.10),rgba(14,7,11,.94));
+  box-shadow:0 14px 34px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.04);
+}
+#contact .contact-form input, #contact .contact-form textarea {
+  border:1px solid rgba(255,95,120,.32); border-radius:13px;
+  background:rgba(8,5,9,.78); color:#fff; font-family:'Space Grotesk',sans-serif;
+  box-shadow:inset 0 0 12px rgba(255,41,71,.045);
+  transition:border-color .3s ease,box-shadow .3s ease;
+}
+#contact .contact-form input:focus, #contact .contact-form textarea:focus {
+  outline:none; border-color:var(--b); box-shadow:0 0 0 3px rgba(255,41,71,.12),0 0 18px rgba(255,41,71,.14);
+}
+#contact .contact-form .btn {
+  font-family:'Sora','Space Grotesk',sans-serif; letter-spacing:.04em;
+  box-shadow:0 0 22px rgba(255,41,71,.20);
+}
+#contact .review-card {
+  border-color:rgba(255,65,91,.28);
+  background:linear-gradient(140deg,rgba(255,41,71,.10),rgba(18,8,12,.94));
+}
+@media (max-width:520px) {
+  header .brand .brand-dp { width:38px; height:38px; flex-basis:38px; }
+  header .brand b { letter-spacing:.045em; }
+  header .pill { display:none; }
+}
+@media (prefers-reduced-motion:reduce) {
+  header .brand b,header .brand b:after,#about .info > div:after { animation:none; }
+  #about .info > div,#contact .actions .btn { transition:none; }
+}
+
+header .brand .brand-dp {
+  border-radius: 17px 6px 17px 6px !important;
+  clip-path: polygon(14% 0,86% 0,100% 14%,100% 86%,86% 100%,14% 100%,0 86%,0 14%);
+  padding: 2px;
+  border: 2px solid var(--b);
+  background: linear-gradient(135deg,var(--a),var(--b),#7b071c);
+  box-shadow: 0 0 0 3px rgba(255,41,71,.15), 0 0 24px rgba(255,41,71,.55);
+  animation: headerEmblem 4.5s ease-in-out infinite;
+  transition: transform .35s ease, filter .35s ease;
+}
+header .brand .brand-dp:hover { transform: rotate(-7deg) scale(1.08); filter: saturate(1.25); }
+header .brand b {
+  font-family: 'Sora','Space Grotesk','Outfit',sans-serif !important;
+  font-size: clamp(.9rem,2.4vw,1.12rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: .11em !important;
+  background: linear-gradient(100deg,#fff 0%,var(--b) 22%,#fff 43%,var(--a) 65%,#fff 88%);
+  background-size: 240% auto;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: naqashShimmer 4.2s linear infinite, headerTextGlow 2.8s ease-in-out infinite;
+  text-shadow: none;
+}
+header .brand b:after {
+  height: 2px;
+  background: linear-gradient(90deg,transparent,var(--a),var(--b),var(--a),transparent);
+  box-shadow: 0 0 12px rgba(255,41,71,.6);
+}
+@keyframes headerEmblem {
+  0%,100% { filter: drop-shadow(0 0 5px rgba(255,41,71,.4)); }
+  50% { filter: drop-shadow(0 0 13px rgba(255,130,144,.6)); }
+}
+@keyframes headerTextGlow {
+  0%,100% { filter: drop-shadow(0 0 2px rgba(255,41,71,.3)); }
+  50% { filter: drop-shadow(0 0 9px rgba(255,41,71,.6)); }
+}
+#about .info > div {
+  border: 1px solid rgba(255,65,91,.48);
+  background: linear-gradient(115deg,rgba(255,41,71,.18),rgba(22,8,13,.94) 55%,rgba(255,41,71,.09));
+  border-radius: 17px;
+  padding: 15px 17px 15px 19px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 9px 25px rgba(0,0,0,.24);
+  animation: aboutCardFloat 5.5s ease-in-out infinite;
+}
+#about .info > div:nth-child(even) { animation-delay: .65s; }
+#about .info > div:before {
+  width: 4px;
+  background: linear-gradient(180deg,#fff0f2,var(--a),#a40025);
+  box-shadow: 0 0 16px rgba(255,41,71,.6);
+}
+#about .info small {
+  color: var(--b);
+  font-size: .7rem;
+  letter-spacing: .2em;
+}
+#about .info strong {
+  font-family: 'Sora','Space Grotesk',sans-serif;
+  font-size: .94rem;
+  letter-spacing: .025em;
+}
+@keyframes aboutCardFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  header .brand .brand-dp, header .brand b, #about .info > div { animation: none !important; }
+}
+
+#gallery .insta-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+#gallery .post-card { animation: galleryCardRise .7s ease both; }
+#gallery .post-card:nth-child(2n) { animation-delay: .12s; }
+@keyframes galleryCardRise { from { opacity:0; transform:translateY(18px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }
+@media(min-width:760px) { #gallery .insta-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+
+</style><style>
+#social-connect { padding-top: 12px; padding-bottom: 110px; }
+.social-connect-panel { text-align:center; overflow:hidden; }
+.social-connect-buttons { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; max-width:680px; margin:24px auto 4px; }
+.social-big-btn { display:flex; align-items:center; gap:14px; min-width:min(260px,100%); flex:1; padding:17px 20px; border:1px solid #74303e; border-radius:18px; text-align:left; color:#fff; text-decoration:none; background:linear-gradient(135deg,#211016,#0c090c); box-shadow:0 10px 28px #0008,inset 0 1px #ffffff12; transition:transform .25s,box-shadow .25s,border-color .25s; }
+.social-big-btn:hover { transform:translateY(-5px); border-color:var(--a); box-shadow:0 14px 34px rgba(255,41,71,.2); }
+.social-big-btn .social-symbol { display:grid; place-items:center; width:48px; height:48px; flex:0 0 48px; border-radius:14px; font-size:25px; background:transparent; color:#ff7188; }
+.social-big-btn strong,.social-big-btn small { display:block; }
+.social-big-btn strong { font:800 1rem 'Sora','Space Grotesk',sans-serif; letter-spacing:.3px; }
+.social-big-btn small { margin-top:4px; color:#c8aeb5; font-size:.75rem; }
+.social-big-btn .social-arrow { margin-left:auto; color:var(--a); font-size:22px; }
+.whatsapp-big:hover { border-color:#52e68b; box-shadow:0 14px 34px #20c76a26; }
+@media(max-width:520px){.social-connect-buttons{flex-direction:column}.social-big-btn{width:100%;min-width:0}}
+
+/* Theme Switcher Styles */
+.theme-switcher { display: flex; gap: 8px; align-items: center; margin-left: auto; margin-right: 15px; }
+.theme-btn { width: 22px; height: 22px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; transition: transform 0.2s, border-color 0.2s; box-shadow: 0 0 12px rgba(255,255,255,0.15); }
+.theme-btn:hover { transform: scale(1.15); }
+.t-red { background: #ff2947; }
+.t-green { background: #20c76a; }
+.t-blue { background: #1da1f2; }
+.t-white { background: #ffffff; }
+@media(max-width:520px) { .theme-switcher { margin-right: 8px; gap: 6px; } .theme-btn { width: 18px; height: 18px; } }
+
+/* VIP Premium Styling */
+@media (pointer: fine) { body { cursor: none; } }
+#c-dot, #c-trail { position: fixed; border-radius: 50%; pointer-events: none; z-index: 999999; transform: translate(-50%, -50%); transition: opacity 0.3s; }
+#c-dot { width: 8px; height: 8px; background: var(--a); box-shadow: 0 0 12px var(--a), 0 0 20px var(--a); }
+#c-trail { width: 32px; height: 32px; border: 1.5px solid var(--a); transition: transform 0.15s ease-out, opacity 0.3s; box-shadow: inset 0 0 10px var(--a); opacity: 0.6; }
+.vip-widgets { position: fixed; left: 16px; top: 90px; z-index: 99; display: flex; flex-direction: column; gap: 12px; }
+.vip-btn { background: rgba(14, 7, 11, 0.85); border: 1px solid #713143; border-radius: 20px; padding: 7px 14px; color: var(--b); font-size: 0.72rem; font-family: 'Space Grotesk', 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 1px; backdrop-filter: blur(8px); display: flex; align-items: center; gap: 8px; cursor: pointer; box-shadow: 0 0 20px rgba(255, 41, 71, 0.15); transition: 0.3s; text-transform: uppercase; }
+@media (max-width: 768px) { .vip-widgets { top: 70px; left: 10px; transform: scale(0.85); transform-origin: left top; } }
+.vip-btn:hover { border-color: var(--a); color: #fff; transform: translateX(5px); box-shadow: 0 0 25px rgba(255, 41, 71, 0.3); }
+.vip-btn.active-music { border-color: var(--a); color: #fff; text-shadow: 0 0 8px var(--a); box-shadow: inset 0 0 15px rgba(255,41,71,0.2); }
+#cyberCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -3; pointer-events: none; opacity: 0.3; }
+
+</style></head><body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<button aria-label="Back to top" class="back-top" id="backTop">↑</button>
+
+<div class="vip-widgets">
+   <div class="vip-btn" id="liveTime"><i class="live-dot" style="margin:0"></i> <span id="pkTime">ATTOCK: --:--</span></div>
+   <button class="vip-btn" id="musicToggle" aria-label="Toggle Music">🎵 BGM: OFF</button>
+</div>
+<div id="c-dot"></div><div id="c-trail"></div>
+<canvas id="cyberCanvas"></canvas>
+<audio id="bgmAudio" loop preload="none">
+  <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=cyberpunk-2099-10701.mp3" type="audio/mpeg">
+</audio>
+
+<header class="top"><nav class="wrap">
+  <div class="brand brand-lockup brand-premium"><img alt="NAQASH TECH profile" class="brand-dp" src="https://i.ibb.co/nNZX9Hpk/file-00000000bbf08211bb337eff0f74d187.png"/><b class="premium-brand-text">NAQASH TECH</b></div>
+  
+  <div class="theme-switcher">
+    <button class="theme-btn t-red" aria-label="Red Theme"></button>
+    <button class="theme-btn t-green" aria-label="Green Theme"></button>
+    <button class="theme-btn t-blue" aria-label="Blue Theme"></button>
+    <button class="theme-btn t-white" aria-label="White Theme"></button>
+  </div>
+  
+  <span class="live-pill"><i class="live-dot"></i> LIVE</span>
+  <button aria-label="More" class="dots">•••</button>
+</nav></header>
+
+<main>
+<section class="hero wrap" id="home"><div class="available">● AVAILABLE FOR WORK</div>
+<div class="avatar-wrap" id="avatarTap" title="Tap to change photo color"><div class="orbit"><i></i></div><span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span><img alt="Naqash Ali" id="mainPhoto" src="https://i.ibb.co/nNZX9Hpk/file-00000000bbf08211bb337eff0f74d187.png"/></div>
+<h1>NAQASH TECH</h1><div class="role">UI/UX Designer · Web Developer</div><div class="typing-tagline" aria-label="Creative digital experiences"><span id="typingWords"></span><i></i></div><div class="actions"><a class="btn" href="#projects">▣ View Work</a><a class="btn ghost" href="#contact">✉ Contact</a></div></section>
+<section class="section wrap" id="about"><div class="panel"><h2 class="heading">♙ <span>About Me</span></h2><div class="aboutgrid"><div class="about-photo-wrap"><img alt="Naqash portrait" class="aboutpic" src="https://i.ibb.co/q3BL9DwZ/file-000000005d7881fa902dc0ab4d6b9aa9.png"/></div><div class="info">
+<div><small>● NAME</small><strong>Naqash Ali</strong></div>
+<div><small>● AGE</small><strong>21</strong></div>
+<div><small>● LOCATION</small><strong>Mirza, Attock</strong></div>
+<div><small>● EMAIL</small><strong><a href="mailto:naqash78780@gmail.com">naqash78780@gmail.com</a></strong></div>
+</div></div></section>
+<section class="section wrap" id="skills"><div class="panel"><h2 class="heading">▱ <span>My Skills</span></h2><div class="skills">
+<div class="skill"><div class="skilltop">〈〉 Web Development <b>90%</b></div><div class="bar"><i data-progress="90" style="--w:90%"></i></div></div>
+<div class="skill"><div class="skilltop">♧ UI/UX Design <b>88%</b></div><div class="bar"><i data-progress="88" style="--w:88%"></i></div></div>
+<div class="skill"><div class="skilltop">▣ Cyber Security <b>80%</b></div><div class="bar"><i data-progress="80" style="--w:80%"></i></div></div>
+<div class="skill"><div class="skilltop">▤ Database Design <b>80%</b></div><div class="bar"><i data-progress="80" style="--w:80%"></i></div></div>
+<div class="skill"><div class="skilltop">⌘ JavaScript <b>70%</b></div><div class="bar"><i data-progress="70" style="--w:70%"></i></div></div>
+</div></div></section>
+<section class="section wrap" id="work"><div class="panel"><h2 class="heading">⚒ <span>What I Do</span></h2><div class="grid"><article class="tile"><div class="ico">〈〉</div><h3>Web Development</h3><p>Modern responsive websites</p></article><article class="tile"><div class="ico">♧</div><h3>UI/UX Design</h3><p>Beautiful glassmorphism interfaces</p></article><article class="tile"><div class="ico">▣</div><h3>Cyber Security</h3><p>Website security and protection</p></article><article class="tile"><div class="ico">◎</div><h3>SEO Optimization</h3><p>Improve search visibility</p></article></div></div></section>
+<section class="section wrap" id="experience"><div class="panel"><h2 class="heading">▣ <span>Experience</span></h2><div class="timeline"><div class="timecard"><small>2024 — PRESENT</small><h3>WEB &amp; UI/UX DEVELOPER</h3><p>Creating responsive websites, user interfaces and digital experiences.</p></div><div class="timecard"><small>ONGOING</small><h3>INDEPENDENT PROJECTS</h3><p>Building portfolio websites, business pages and creative digital tools.</p></div></div></div></section>
+<section class="section wrap" id="projects"><div class="panel"><h2 class="heading">▣ <span>Featured Projects</span></h2><div class="grid"><article class="tile"><div class="ico">✦</div><h3>NAQASH TECH Portfolio</h3><p>Personal portfolio and service showcase.</p></article><article class="tile"><div class="ico">⌘</div><h3>Digital Tools</h3><p>Useful web tools and responsive experiences.</p></article></div></div></section>
+<section class="section wrap" id="gallery"><div class="panel"><h2 class="heading">▧ <span>Instagram Gallery</span></h2><p class="subtle" style="text-align:center;font-size:.75rem;color:var(--muted)">Tap a post to view it · like buttons are a front-end demo until connected to a database</p><div class="gallery insta-grid">
+<article class="post-card"><img alt="Naqash portrait post" data-full="https://i.ibb.co/q3BL9DwZ/file-000000005d7881fa902dc0ab4d6b9aa9.png" src="https://i.ibb.co/q3BL9DwZ/file-000000005d7881fa902dc0ab4d6b9aa9.png"/><div class="post-actions"><button class="like-btn">♡</button><span class="likes">3,000 likes</span><span>♡</span></div><p>NAQASH ALI · Creative work</p></article>
+<article class="post-card"><img alt="NAQASH TECH post" data-full="https://i.ibb.co/nNZX9Hpk/file-00000000bbf08211bb337eff0f74d187.png" src="https://i.ibb.co/nNZX9Hpk/file-00000000bbf08211bb337eff0f74d187.png"/><div class="post-actions"><button class="like-btn">♡</button><span class="likes">2,480 likes</span><span>♡</span></div><p>NAQASH TECH · Design mode</p></article>
+<article class="post-card"><img alt="Naqash gallery post" data-full="https://i.ibb.co/q3BL9DwZ/file-000000005d7881fa902dc0ab4d6b9aa9.png" src="https://i.ibb.co/q3BL9DwZ/file-000000005d7881fa902dc0ab4d6b9aa9.png"/><div class="post-actions"><button class="like-btn">♡</button><span class="likes">1,750 likes</span><span>♡</span></div><p>NAQASH ALI · Profile</p></article>
+<article class="post-card"><img alt="Naqash personal photo 1" data-full="https://i.ibb.co/fY0D7H6z/file-0000000006b882079efe4524ea52b723.jpg" src="https://i.ibb.co/fY0D7H6z/file-0000000006b882079efe4524ea52b723.jpg" loading="lazy"/><div class="post-actions"><button class="like-btn" aria-label="Like photo">♡</button><span class="likes">♡ Like</span><span>✧</span></div><p>NAQASH TECH · PERSONAL PHOTO 1</p></article></div></div></section>
+<section class="section wrap" id="posts"><div class="panel"><h2 class="heading">▤ <span>My Posts</span></h2><div class="grid"><article class="tile"><div class="ico">✦</div><h3>Latest Updates</h3><p>New projects, design updates and announcements will appear here.</p></article><article class="tile"><div class="ico">▧</div><h3>Behind The Work</h3><p>Creative process, website previews and portfolio highlights.</p></article></div></div></section>
+<section class="service-section wrap" id="services"><div class="panel"><h2 class="heading">🔦 <span>Digital Services</span></h2><p class="section-note">Choose a service to view available support.</p>
+<div class="service-group"><h3>Social Media &amp; Account Support</h3><div class="grid">
+<article class="tile service-card"><div class="torch"></div><div class="ico">◉</div><h3>WhatsApp Account Recovery</h3><p>Official appeal guidance and account security help.</p></article>
+<article class="tile service-card"><div class="torch"></div><div class="ico">⌁</div><h3>WhatsApp Channel Growth</h3><p>Content planning and genuine audience growth.</p></article>
+<article class="tile service-card"><div class="torch"></div><div class="ico">♧</div><h3>Social Account Security</h3><p>Security checks, privacy settings and phishing awareness.</p></article>
+<article class="tile service-card"><div class="torch"></div><div class="ico">✦</div><h3>TikTok / Instagram Promotion</h3><p>Legitimate content promotion and profile optimization.</p></article>
+<article class="tile service-card"><div class="torch"></div><div class="ico">♡</div><h3>Social Media Engagement</h3><p>Organic likes, followers and audience strategy.</p></article>
+<article class="tile service-card"><div class="torch"></div><div class="ico">▣</div><h3>WhatsApp Business Setup</h3><p>Business profile, catalogue and channel setup.</p></article></div></div>
+<div class="service-group"><h3>Website Development · Fixed Packages</h3><div class="grid price-grid">
+<article class="tile service-card price-card"><div class="torch"></div><div class="ico">⌘</div><h3>Simple Website</h3><strong class="price">$10</strong><p>Clean responsive basic website.</p></article>
+<article class="tile service-card price-card"><div class="torch"></div><div class="ico">◈</div><h3>Professional Website</h3><strong class="price">$20</strong><p>Polished multi-section website.</p></article>
+<article class="tile service-card price-card"><div class="torch"></div><div class="ico">✧</div><h3>Premium Website</h3><strong class="price">$30</strong><p>VIP visuals, animations and refined sections.</p></article></div></div>
+<div class="service-group"><h3>Gaming Marketplace</h3><div class="grid">
+<article class="tile service-card"><div class="torch"></div><div class="ico">🎮</div><h3>Ludo Star Coins</h3><p>Buy / sell listings, subject to availability.</p></article>
+<article class="tile service-card"><div class="torch"></div><div class="ico">💎</div><h3>Yellow Diamonds</h3><p>Buy / sell listings, subject to availability.</p></article>
+<article class="tile service-card"><div class="torch"></div><div class="ico">🔥</div><h3>Free Fire IDs</h3><p>Account listings subject to game rules.</p></article>
+<article class="tile service-card"><div class="torch"></div><div class="ico">🪖</div><h3>PUBG IDs</h3><p>Account listings subject to game rules.</p></article>
+<article class="tile service-card"><div class="torch"></div><div class="ico">🎲</div><h3>Games &amp; Digital Items</h3><p>Game-related digital item listings.</p></article>
+<article class="tile service-card"><div class="torch"></div><div class="ico">🛡</div><h3>Safe Trading Help</h3><p>Basic transaction safety guidance.</p></article></div></div></div></section>
+<section class="section wrap" id="contact"><div class="panel"><h2 class="heading">✉ <span>Contact Me</span></h2>
+<div class="actions" style="margin:14px auto 18px">
+<a class="btn" href="mailto:naqash78780@gmail.com">✉ Email Me</a>
+<a class="btn ghost" href="https://wa.me/923115414770" rel="noopener noreferrer" target="_blank">◉ WhatsApp</a>
+<a class="btn ghost" href="https://www.tiktok.com/@Itskashieditz333" rel="noopener noreferrer" target="_blank">♪ TikTok</a>
+</div>
+<p class="section-note">Send your project request or feedback. Add your receiving email address to activate direct delivery.</p><form class="contact-form" id="contactForm"><input id="contactName" placeholder="Your name" required=""/><input id="contactEmail" placeholder="Your email address" required="" type="email"/><textarea id="contactMessage" placeholder="Project details or review..." required="" rows="5"></textarea><button class="btn" type="submit">Prepare Email Message</button><p class="form-note" id="contactStatus">Email recipient is awaited.</p></form></div><div class="panel review-panel"><h2 class="heading">★ <span>Customer Reviews</span></h2><p class="section-note">Sample design cards — replace with real customer reviews before publishing.</p><div class="review-grid"><article class="tile review-card"><div class="stars">★★★★★</div><h3>Review Preview 1</h3><p>“Great communication and a smooth experience. The work was delivered with care.”</p><small>Sample layout — replace with genuine customer feedback</small></article><article class="tile review-card"><div class="stars">★★★★★</div><h3>Review Preview 2</h3><p>“Great communication and a smooth experience. The work was delivered with care.”</p><small>Sample layout — replace with genuine customer feedback</small></article><article class="tile review-card"><div class="stars">★★★★★</div><h3>Review Preview 3</h3><p>“Great communication and a smooth experience. The work was delivered with care.”</p><small>Sample layout — replace with genuine customer feedback</small></article><article class="tile review-card"><div class="stars">★★★★★</div><h3>Review Preview 4</h3><p>“Great communication and a smooth experience. The work was delivered with care.”</p><small>Sample layout — replace with genuine customer feedback</small></article><article class="tile review-card"><div class="stars">★★★★★</div><h3>Review Preview 5</h3><p>“Great communication and a smooth experience. The work was delivered with care.”</p><small>Sample layout — replace with genuine customer feedback</small></article><article class="tile review-card"><div class="stars">★★★★★</div><h3>Review Preview 6</h3><p>“Great communication and a smooth experience. The work was delivered with care.”</p><small>Sample layout — replace with genuine customer feedback</small></article><article class="tile review-card"><div class="stars">★★★★★</div><h3>Review Preview 7</h3><p>“Great communication and a smooth experience. The work was delivered with care.”</p><small>Sample layout — replace with genuine customer feedback</small></article><article class="tile review-card"><div class="stars">★★★★★</div><h3>Review Preview 8</h3><p>“Great communication and a smooth experience. The work was delivered with care.”</p><small>Sample layout — replace with genuine customer feedback</small></article><article class="tile review-card"><div class="stars">★★★★★</div><h3>Review Preview 9</h3><p>“Great communication and a smooth experience. The work was delivered with care.”</p><small>Sample layout — replace with genuine customer feedback</small></article><article class="tile review-card"><div class="stars">★★★★★</div><h3>Review Preview 10</h3><p>“Great communication and a smooth experience. The work was delivered with care.”</p><small>Sample layout — replace with genuine customer feedback</small></article></div></div></section>
+</main><footer class="premium-footer">
+  <div class="footer-glow"></div>
+  <div class="footer-brand">NAQASH <span>TECH</span></div>
+  <div class="footer-line">CREATIVE • DIGITAL • INNOVATIVE</div>
+  <div class="footer-social">
+    <a href="https://www.tiktok.com/@Itskashieditz333" target="_blank" rel="noopener noreferrer" aria-label="TikTok">♪ TikTok</a>
+    <a href="https://wa.me/923115414770" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">◉ WhatsApp</a>
+  </div>
+  <small>© 2026 NAQASH TECH · Designed by NAQASH ALI</small>
+</footer>
+
+<section class="section wrap" id="social-connect">
+  <div class="panel social-connect-panel">
+    <h2 class="heading">✦ <span>Connect With NAQASH TECH</span></h2>
+    <p class="section-note">Let's connect — follow on TikTok or message directly on WhatsApp.</p>
+    <div class="social-connect-buttons">
+      <a class="social-big-btn whatsapp-big" href="https://wa.me/923115414770" target="_blank" rel="noopener noreferrer"><span class="social-symbol" style="background:transparent;"><img src="https://img.icons8.com/fluency/48/whatsapp.png" alt="WhatsApp" style="width:32px; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));"/></span><span><strong>WhatsApp</strong><small>Chat with me</small></span><span class="social-arrow">↗</span></a>
+      <a class="social-big-btn tiktok-big" href="https://www.tiktok.com/@Itskashieditz333" target="_blank" rel="noopener noreferrer"><span class="social-symbol" style="background:transparent;"><img src="https://img.icons8.com/fluency/48/tiktok.png" alt="TikTok" style="width:32px; filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));"/></span><span><strong>TikTok</strong><small>Follow my profile</small></span><span class="social-arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+<nav class="bottomnav"><a class="active" href="#home">⌂<span>Home</span></a><a href="#gallery">▧<span>Gallery</span></a><a href="#posts">▤<span>Posts</span></a><a href="#work">◎<span>Work</span></a><a href="#projects">▱<span>Projects</span></a><a href="#services">✦<span>Services</span></a><a href="#contact">✉<span>Contact</span></a></nav><div class="lightflash" id="flash"></div>
+<div class="photo-modal" id="photoModal"><div class="photo-modal-inner"><button class="photo-close" id="photoClose">Close ✕</button><img alt="Expanded gallery post" id="photoExpanded"/></div></div>
+
+<script>
+const photo=document.getElementById('mainPhoto');let tint=0;const filters=['none','hue-rotate(65deg) saturate(1.35)','hue-rotate(145deg) saturate(1.4)','grayscale(1) contrast(1.15)','sepia(.35) hue-rotate(250deg) saturate(1.5)','hue-rotate(300deg) saturate(1.6)'];document.getElementById('avatarTap').addEventListener('click',()=>{tint=(tint+1)%filters.length;photo.style.filter=filters[tint];photo.style.transform='scale(1.04)';setTimeout(()=>photo.style.transform='',350);});
+document.querySelectorAll('.service-card').forEach(card=>card.addEventListener('click',e=>{document.querySelectorAll('.service-card').forEach(c=>c.classList.remove('active'));card.classList.add('active');let r=card.getBoundingClientRect();card.style.setProperty('--x',((e.clientX-r.left)/r.width*100)+'%');card.style.setProperty('--y',((e.clientY-r.top)/r.height*100)+'%');let f=document.getElementById('flash');f.style.setProperty('--lx',(e.clientX/window.innerWidth*100)+'%');f.style.setProperty('--ly',(e.clientY/window.innerHeight*100)+'%');f.classList.add('on');setTimeout(()=>f.classList.remove('on'),650)}));
+document.querySelectorAll('.bottomnav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.bottomnav a').forEach(x=>x.classList.remove('active'));a.classList.add('active')}));
+ 
+const contactForm=document.getElementById('contactForm');if(contactForm){contactForm.addEventListener('submit',e=>{e.preventDefault();document.getElementById('contactStatus').textContent='Form ready. Add your receiving email address to enable direct email sending.';});}
+
+const progressItems=document.querySelectorAll('.bar i[data-progress]');
+progressItems.forEach(el=>{el.style.width='0%';});
+if('IntersectionObserver' in window){
+ const progressObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){const el=entry.target;const target=Math.max(0,Math.min(100,Number(el.dataset.progress)||0));el.style.transition='width 2.1s cubic-bezier(.16,.82,.25,1)';requestAnimationFrame(()=>{el.style.width=target+'%'});progressObserver.unobserve(el);}
+ }),{threshold:.25});
+ progressItems.forEach(el=>progressObserver.observe(el));
+}else{progressItems.forEach(el=>el.style.width=(el.dataset.progress||0)+'%');}
+
+const photoModal=document.getElementById('photoModal'),photoExpanded=document.getElementById('photoExpanded');
+document.querySelectorAll('.post-card img').forEach(img=>img.addEventListener('click',()=>{photoExpanded.src=img.dataset.full||img.src;photoModal.classList.add('open')}));
+document.getElementById('photoClose').addEventListener('click',()=>photoModal.classList.remove('open'));
+photoModal.addEventListener('click',e=>{if(e.target===photoModal)photoModal.classList.remove('open')});
+document.querySelectorAll('.post-card .like-btn').forEach(btn=>btn.addEventListener('click',()=>{btn.classList.toggle('liked');btn.textContent=btn.classList.contains('liked')?'♥':'♡'}));
+
+const progressLine=document.getElementById('scrollProgress');
+const backTop=document.getElementById('backTop');
+const updateScrollUI=()=>{
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  const pct=max>0?(window.scrollY/max)*100:0;
+  if(progressLine)progressLine.style.width=pct+'%';
+  if(backTop)backTop.classList.toggle('show',window.scrollY>420);
+};
+window.addEventListener('scroll',updateScrollUI,{passive:true});
+updateScrollUI();
+if(backTop)backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+const revealTargets=document.querySelectorAll('.section .panel,.service-section .panel,.hero .available,.hero .avatar-wrap,.hero h1,.hero .role,.hero .actions');
+revealTargets.forEach(el=>el.classList.add('reveal'));
+if('IntersectionObserver' in window){
+  const revealObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -35px 0px'});
+  revealTargets.forEach(el=>revealObserver.observe(el));
+}else{revealTargets.forEach(el=>el.classList.add('visible'));}
+
+const navLinks=[...document.querySelectorAll('.bottomnav a')];
+const navSections=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+if('IntersectionObserver' in window){
+  const sectionObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));
+      }
+    });
+  },{rootMargin:'-28% 0px -58% 0px',threshold:0});
+  navSections.forEach(section=>sectionObserver.observe(section));
+}
+
+// VIP Scripts & Theme Switcher
+window.particleColor = '#ff2947'; // Default particle color
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Theme Switcher Logic
+  document.querySelectorAll('.theme-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      let a, b, pink, bg;
+      if(e.target.classList.contains('t-red')){
+        a='#ff2947'; b='#ff8290'; pink='#ff1744'; bg='#090507';
+      } else if(e.target.classList.contains('t-green')){
+        a='#20c76a'; b='#82ffb3'; pink='#12a353'; bg='#050a07';
+      } else if(e.target.classList.contains('t-blue')){
+        a='#1da1f2'; b='#82d3ff'; pink='#0c85d0'; bg='#05070a';
+      } else if(e.target.classList.contains('t-white')){
+        a='#ffffff'; b='#d9d9d9'; pink='#e0e0e0'; bg='#0a0a0a';
+      }
+      document.documentElement.style.setProperty('--a', a);
+      document.documentElement.style.setProperty('--b', b);
+      document.documentElement.style.setProperty('--pink', pink);
+      document.documentElement.style.setProperty('--bg', bg);
+      window.particleColor = a; // Update canvas particles color
+    });
+  });
+
+  const dot = document.getElementById('c-dot');
+  const trail = document.getElementById('c-trail');
+  if(window.matchMedia("(pointer: fine)").matches) {
+    window.addEventListener('mousemove', (e) => {
+      dot.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
+      setTimeout(() => {
+        trail.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
+      }, 60); 
+    });
+  } else {
+    dot.style.display = 'none'; trail.style.display = 'none'; 
+  }
+
+  const timeDisplay = document.getElementById('pkTime');
+  setInterval(() => {
+    const timeNow = new Date().toLocaleTimeString('en-US', {
+      timeZone: 'Asia/Karachi', hour: '2-digit', minute:'2-digit', second:'2-digit'
+    });
+    timeDisplay.innerText = "ATTOCK: " + timeNow;
+  }, 1000);
+
+  const bgm = document.getElementById('bgmAudio');
+  const mToggle = document.getElementById('musicToggle');
+  mToggle.addEventListener('click', () => {
+    if(bgm.paused) { 
+      bgm.play(); 
+      mToggle.innerText = "🎵 BGM: ON"; 
+      mToggle.classList.add('active-music');
+    } else { 
+      bgm.pause(); 
+      mToggle.innerText = "🎵 BGM: OFF"; 
+      mToggle.classList.remove('active-music');
+    }
+  });
+
+  const typingRoles = ["UI/UX Designer", "Web Developer", "Cyber Security", "Video Editor", "Digital Creator"];
+  let wordIndex = 0, charIndex = 0, isDeleting = false;
+  const typeSpan = document.getElementById('typingWords');
+  
+  if(typeSpan) {
+    function typingEffect() {
+      const currentWord = typingRoles[wordIndex];
+      if(isDeleting) charIndex--; else charIndex++;
+      
+      typeSpan.innerText = currentWord.substring(0, charIndex);
+      
+      let typeSpeed = isDeleting ? 40 : 80;
+      if(!isDeleting && charIndex === currentWord.length) {
+        typeSpeed = 1800; 
+        isDeleting = true;
+      } else if(isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % typingRoles.length;
+        typeSpeed = 400; 
+      }
+      setTimeout(typingEffect, typeSpeed);
+    }
+    setTimeout(typingEffect, 1000);
+  }
+
+  if(window.matchMedia("(pointer: fine)").matches) {
+    document.querySelectorAll('.panel, .tile, .service-card, .review-card, .post-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const xPercent = (x / rect.width - 0.5) * 15; 
+        const yPercent = (y / rect.height - 0.5) * -15;
+        card.style.transform = `perspective(1000px) rotateX(${yPercent}deg) rotateY(${xPercent}deg) scale3d(1.02, 1.02, 1.02)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = ''; 
+      });
+    });
+
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        const x = (e.clientX - rect.left - rect.width / 2) * 0.35; 
+        const y = (e.clientY - rect.top - rect.height / 2) * 0.35;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+      });
+    });
+  }
+
+  const canvas = document.getElementById('cyberCanvas');
+  const ctx = canvas.getContext('2d');
+  let w = canvas.width = window.innerWidth;
+  let h = canvas.height = window.innerHeight;
+  
+  const particles = Array(45).fill().map(() => ({
+    x: Math.random() * w, y: Math.random() * h,
+    vx: (Math.random() - 0.5) * 0.6, vy: (Math.random() - 0.5) * 0.6,
+    size: Math.random() * 1.5 + 0.5
+  }));
+  
+  window.addEventListener('resize', () => {
+    w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight;
+  });
+  
+  function drawParticles() {
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = window.particleColor; // Dynamic theme color
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if(p.x < 0) p.x = w; if(p.x > w) p.x = 0;
+      if(p.y < 0) p.y = h; if(p.y > h) p.y = 0;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    requestAnimationFrame(drawParticles);
+  }
+  drawParticles();
+});
+
+(function(){
+ const panel=document.getElementById('ntChatPanel'),launcher=document.getElementById('ntChatLauncher'),close=document.getElementById('ntChatClose'),messages=document.getElementById('ntChatMessages'),form=document.getElementById('ntChatForm'),input=document.getElementById('ntChatInput');
+ if(!panel||!launcher||!messages||!form||!input)return;
+ const open=()=>{panel.classList.add('open');panel.setAttribute('aria-hidden','false');input.focus();};
+ const shut=()=>{panel.classList.remove('open');panel.setAttribute('aria-hidden','true');};
+ launcher.addEventListener('click',()=>panel.classList.contains('open')?shut():open());close.addEventListener('click',shut);
+ function add(text,who){const b=document.createElement('div');b.className='nt-bubble '+who;b.textContent=text;messages.appendChild(b);messages.scrollTop=messages.scrollHeight;}
+ 
+ function reply(text){
+    const t = text.toLowerCase();
+    let answer;
+    if(/\b(hi|hello|hey|salam|assalam|aoa)\b/.test(t)) answer = 'Hello! 😊 Welcome to NAQASH TECH. What would you like to know?';
+    else if(/\b(bye|goodbye|allah hafiz|khuda hafiz)\b/.test(t)) answer = 'Goodbye! 👋 Thanks for visiting NAQASH TECH. Have a great day!';
+    else if(/service|work|offer|design|website|editing/.test(t)) answer = 'I provide Web Development, UI/UX Design, and Cyber Security services. Tell me what you need!';
+    else if(/contact|whatsapp|number|email/.test(t)) answer = 'Contact me on WhatsApp: 03115414770 or email: naqash78780@gmail.com.';
+    else if(/name|who are you/.test(t)) answer = 'My name is Naqash Ali, founder of NAQASH TECH.';
+    else if(/location|where/.test(t)) answer = 'Naqash Tech is based in Mirza, Attock.';
+    else answer = 'Thanks for your message! 😊 I am an AI assistant. For a direct reply from Naqash, tap the WhatsApp button.';
+    setTimeout(() => add(answer, 'bot'), 350);
+ }
+ 
+ function send(value){const v=value.trim();if(!v)return;add(v,'user');input.value='';reply(v);}
+ form.addEventListener('submit',e=>{e.preventDefault();send(input.value);});
+ panel.querySelectorAll('[data-chat]').forEach(b=>b.addEventListener('click',()=>send(b.dataset.chat)));
+})();
+</script>
+
+<button id="ntChatLauncher" class="nt-chat-launcher" aria-label="Open chat">✦ <span>Chat</span></button>
+<section id="ntChatPanel" class="nt-chat-panel" aria-label="NAQASH TECH chat" aria-hidden="true">
+<header class="nt-chat-head"><div><b>NAQASH TECH AI SUPPORT</b><small><i></i> Online · instant replies</small></div><button id="ntChatClose" aria-label="Close chat">×</button></header>
+<div class="nt-chat-messages" id="ntChatMessages"><div class="nt-bubble bot">Hello! 👋 Welcome to NAQASH TECH. How can I help you?</div></div>
+<div class="nt-chat-quick"><button data-chat="Hello">Hello</button><button data-chat="What is your name?">Your Name</button><button data-chat="What services do you offer?">Services</button><button data-chat="How can I contact you?">Contact</button></div>
+<form id="ntChatForm" class="nt-chat-form"><input id="ntChatInput" autocomplete="off" placeholder="Type a message..." aria-label="Type a message"><button type="submit">➤</button></form>
+<div class="nt-chat-foot">Automated assistant · For a person, use WhatsApp</div></section>
+
+</body>
+<style>
+.info a{color:#fff;text-decoration:none}.info a:hover{color:var(--b)}
+.nt-chat-launcher{position:fixed;right:18px;bottom:150px;z-index:1001;border:1px solid var(--b);border-radius:30px;padding:13px 18px;background:linear-gradient(135deg,var(--a),#8f1028);color:#fff;font-weight:900;box-shadow:0 8px 28px rgba(255,41,71,0.3);cursor:pointer}
+.nt-chat-panel{display:none;position:fixed;right:16px;bottom:210px;width:min(350px,calc(100vw - 28px));height:440px;max-height:65vh;z-index:1002;overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#10090d;box-shadow:0 18px 55px #000c,0 0 28px rgba(255,41,71,0.2);flex-direction:column}
+.nt-chat-panel.open{display:flex;animation:ntChatIn .22s ease-out}@keyframes ntChatIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.nt-chat-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:linear-gradient(100deg,var(--line),#1b0a10);border-bottom:1px solid var(--line);color:#fff}
+.nt-chat-head b{display:block;font-size:.82rem;letter-spacing:.08em}.nt-chat-head small{display:block;color:var(--b);font-size:.68rem;margin-top:4px}.nt-chat-head small i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#49e58a;margin-right:5px}
+.nt-chat-head button{border:0;background:transparent;color:#fff;font-size:25px;cursor:pointer}
+.nt-chat-messages{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:10px}.nt-bubble{max-width:88%;padding:10px 12px;border-radius:14px;font-size:.8rem;line-height:1.5;overflow-wrap:anywhere}
+.nt-bubble.bot{align-self:flex-start;background:#29121a;color:#ffe9ed;border:1px solid var(--line)}.nt-bubble.user{align-self:flex-end;background:var(--a);color:#fff}
+.nt-chat-quick{display:flex;gap:7px;padding:0 12px 10px;flex-wrap:wrap}.nt-chat-quick button{border:1px solid var(--line);background:#1e0c12;color:var(--txt);border-radius:20px;padding:6px 10px;font-size:.68rem;cursor:pointer}
+.nt-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}.nt-chat-form input{min-width:0;flex:1;border:1px solid var(--line);border-radius:22px;padding:10px 13px;background:var(--bg);color:#fff;outline:none}.nt-chat-form button{width:40px;border:0;border-radius:50%;background:var(--a);color:#fff;font-size:18px}.nt-chat-foot{text-align:center;padding:0 8px 9px;color:var(--muted);font-size:.6rem}
+@media(max-width:520px){.nt-chat-launcher{bottom:145px;right:14px}.nt-chat-panel{right:10px;bottom:200px;height:420px}}
+</style>
+</html>
